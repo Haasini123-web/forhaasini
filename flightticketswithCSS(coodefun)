@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Tickets</title>
+
+    <style>
+
+
+        body
+        {
+          background-color: red;
+
+        }
+      form
+      { position:absolute;
+      top:15%;
+      left:60%;
+      background-color:white;
+      border-radius:5px;
+      width:450px;
+      padding: 0px 75px;
+      }
+
+#aeroplane1
+{
+  height: 200px;
+  position: absolute;
+  top:5%;
+  left:5%;
+  animation: floating 5s ease-in-out infinite ;
+}
+
+#aeroplane2
+{
+  height:200px;
+  position:absolute;
+  top: 35%;
+  left:30%;
+  animation: floating 4s ease-in-out infinite ;
+
+}
+@keyframes floating
+
+{
+  0%
+  {
+    transform: translatex(0px);
+  }
+
+  50%
+  {
+    transform: translatex(30px);
+  }
+
+  100%
+  {
+    transform: translatex(0px);
+
+  }
+}
+
+.block-display
+{
+  display:block;
+}
+label {
+  font-size: 16px;
+  margin: 20px 0px 4px 0px;
+}
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 300px;
+  height: 40px;
+  border: 1px solid gray;
+  padding: 0 5px;
+}
+
+    </style>
+
+    </head>
+<body>
+
+  <img id="aeroplane1" src="../Images/Aeroplane 1.png" alt="Aeroplane"/>
+  <img id="aeroplane2" src="../Images/Aeroplane 2.png" alt="Aeroplane"/>
+
+    <form action="">
+        <h1>Lets Book your flight</h1>
+        <label class="block-display" for="Depcountries">Departure Country</label>
+        <select id="Depcountries" name="Depcountries">
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uae">UAE</option>
+        </select>
+<br>
+<br>
+        <label class="block-display" for="Aricountries">Arival Country</label>
+        <select id="Aricountries" name="Aricountries">
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uae">UAE</option>
+        </select>
+        <br>
+        <br>       
+
+        <Label class="block-display" for="travelDate">Select Travel Date</Label>
+        <input type="date" name="travelDate" id="travelDate"/>
+        <br>
+        <br> 
+        <label class="block-display" for="travellers">No. of Travellers</label>
+        <input type="number" pattern="[0-9]{2}" name="travellers" id="travellers" />
+        <br>
+        <br> 
+        <label class="block-display" for="email">Your email</label>
+        <input type="email" name="email" id="email" placeholder="abcde@email.com" />
+        <br>
+        <br> 
+        <label class="block-display" for="meal">What type of meal do you want?</label>
+        <input type="radio" name="meal" id="veg" value="veg"/>
+        <label class="lblmeal" for="veg">Vegetarian</label>
+        <input type="radio" name="meal" id="nonveg" value="nonveg"/>
+        <label class="lblmeal" for="Nonveg">Non-Vegetarian</label>
+    <br>
+    <br>
+        
+    
+        <input id="button" type="submit" value="BOOK TICKETS" />
+      </form>
+</body>
+</html>
